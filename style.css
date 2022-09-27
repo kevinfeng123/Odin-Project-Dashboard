@@ -7,21 +7,70 @@
 
 .container{
     display: grid;
-    grid-template-columns: 1fr 5fr;
-    max-height: 100%;
+    grid-template-columns: 2fr 6fr;
+    height: 100vh;
+    max-height: 100vh;
 }
 
 .sidebar{
+    color: white;
     display: grid;
     grid-template-rows: 1fr 5fr 5fr;
-    background: aqua;
+    background: #1992d3;
     padding: 25px;
+    padding-top: 5px;
+    font-size: 20px;
 }
+.sidebar .sidebar-header{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 900;
+   
+}
+.sidebar .sidebar-header img{
+    height: 50px;
+    width: 50px;
+}
+
+.sidebar .sidebar-nav, .sidebar .sidebar-misc{
+    padding-left: 10px;
+}
+
 ul li{
     list-style: none;
+    padding-left: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: 900;
 }
 li#home{
     background: url(favicon/home.png) no-repeat 0;
+}
+li#profile{
+    background: url(favicon/profile.png) no-repeat 0;
+}
+li#messages{
+    background: url(favicon/messages.png) no-repeat 0;
+}
+li#history{
+    background: url(favicon/history.png) no-repeat 0;
+}
+li#tasks{
+    background: url(favicon/tasks.png) no-repeat 0;
+}
+li#communities{
+    background: url(favicon/communities.png) no-repeat 0;
+}
+li#settings{
+    background: url(favicon/settings.png) no-repeat 0;
+}
+li#support{
+    background: url(favicon/support.png) no-repeat 0;
+}
+li#privacy{
+    background: url(favicon/privacy.png) no-repeat 0;
 }
 .main{
     display: grid;
@@ -29,20 +78,25 @@ li#home{
 }
 
 .main-header-wrap{
+    padding: 25px;
     display: grid;
     grid-template-rows: 1fr 1fr;
 }
 
-.main-header-top{
+.main-header-top, .main-header-bottom{
     display: grid;
     grid-template-columns: 5fr 3fr;
 }
 
-.main-header-bottom{
-    display: grid;
-    grid-template-columns: 5fr 3fr;
+.header-searchbar button{
+    background: url(favicon/search.png) no-repeat 0;
+    background-color: grey;
 }
-
+.header-searchbar input, .header-searchbar input:focus{
+    background-color: #e2e8f0;
+    border: none;
+    outline: none;
+}
 .main-content-wrap{
     display: grid;
     grid-template-columns: 5fr 2fr;
@@ -52,11 +106,9 @@ li#home{
     background: red;
     display: grid;
     grid-template: 1fr 1fr 1fr / 1fr 1fr;
-
 }
 
 .side-content{
     background-color: blue;
     display: grid;
-    grid-template-rows: 1fr 3fr 1fr 3fr;
 }
