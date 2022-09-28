@@ -12,6 +12,7 @@
     max-height: 100vh;
 }
 
+
 .sidebar{
     color: white;
     display: grid;
@@ -27,7 +28,7 @@
     align-items: center;
     font-size: 30px;
     font-weight: 900;
-   
+    gap: 15px;
 }
 .sidebar .sidebar-header img{
     height: 50px;
@@ -74,11 +75,11 @@ li#privacy{
 }
 .main{
     display: grid;
-    grid-template-rows: 1fr 4fr;
+    grid-template-rows: 1fr 5fr;
 }
 
 .main-header-wrap{
-    padding: 0 40px;
+    padding: 0 70px;
     display: grid;
     grid-template-rows: 1fr 1fr;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -108,6 +109,7 @@ li#privacy{
     height: 35px;
     width: 100%;
 }
+
 .profile-details{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -132,11 +134,14 @@ li#privacy{
     width: 25px;
     height: 25px;
 }
+.main-header-bottom{
+    align-items: center;
+}
 
 .header-welcome{
     display: grid;
-    grid-template-columns: 1fr 8fr;
-    align-items: center;
+    grid-template-columns: 1fr minmax(425px, 8fr);
+    gap: 15px;
     font-weight: 900;
 }
 .header-welcome .profile-picture{
@@ -165,7 +170,9 @@ li#privacy{
     grid-template-columns: 5fr 2fr;
 }
 .main-content{
-    font-weight: 500;
+    display: grid;
+    grid-template-rows: 1fr 16fr;
+    font-weight: 600;
     font-size: 20px;
     background: #e2e8f0;
     margin-top: 5px;
@@ -173,22 +180,30 @@ li#privacy{
 }
 .main-cards{
     display: grid;
-    grid-template: 1fr 1fr 1fr / 1fr 1fr;
-    gap: 15px;
+    grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
+    gap: 25px;
+    max-height: 800px;
 }
 .card-1{
-    background:#f0b329;
+    border-left: 8px solid #f0b329;
+    background: white;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    padding: 20px;
+    border-radius: 15px;
+    padding: 40px 25px;
+    font-size: 20px;
+    overflow: scroll;
 }
-.card-1 p{
-    font-weight: 400px;
+.card-1 .card-description{
+    padding-top: 5px;
+    font-weight: 200;
     font-size: 16px;
     color: dimgray;
 }
 .card-icons{
     display: grid;
     grid-template-columns: 5fr 1fr 1fr 1fr;
+    padding-top: 25px;
+    align-self: end;
 }
 .card-icons .icon{
     width: 25px;
@@ -205,6 +220,72 @@ li#privacy{
     background: url(favicon/delete.png) no-repeat;
 }
 .side-content{
-    background-color: blue;
+    background: #e2e8f0;
     display: grid;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    margin-top: 5px;
+    padding-top: 15px;
+    padding-right: 40px;
+    
+}
+
+.main-header{
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.side-content .main-header{
+    color: black;
+}
+
+.card-wrap{
+    background: white;
+    border-radius: 15px;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    padding: 20px;
+}
+
+.card-wrap .card-2{
+    padding: 10px;
+}
+
+
+.card-wrap div:nth-child(2){
+    border-bottom: .5px solid black;
+    border-top: .5px solid black;
+}
+
+.card-2-block .block-title{
+    font-weight: 500;
+}
+
+.card-2-block .block-description{
+    font-size: 12px;
+    color: dimgray;
+}
+
+.trending-wrap .card-2{
+    background: white;
+    border-radius: 15px;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 15px;
+    padding: 5px;
+}
+.card-wrap{
+    margin-top: 15px;
+}
+.trending-block{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    align-items: center;
+}
+.trending-description{
+    color: dimgray;
+}
+
+.trending-block{
+    padding: 10px;
 }
