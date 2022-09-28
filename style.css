@@ -7,7 +7,7 @@
 
 .container{
     display: grid;
-    grid-template-columns: 2fr 6fr;
+    grid-template-columns: 1fr 4fr;
     height: 100vh;
     max-height: 100vh;
 }
@@ -78,36 +78,132 @@ li#privacy{
 }
 
 .main-header-wrap{
-    padding: 25px;
+    padding: 0 40px;
     display: grid;
     grid-template-rows: 1fr 1fr;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .main-header-top, .main-header-bottom{
     display: grid;
-    grid-template-columns: 5fr 3fr;
+    grid-template-columns: 7fr 3fr;
+}
+.main-header-top{
+    gap: 50px;
+}
+.header-searchbar{
+    display: grid;
+    grid-template-columns: 1fr 20fr;
+    align-items: center;
 }
 
-.header-searchbar button{
-    background: url(favicon/search.png) no-repeat 0;
-    background-color: grey;
+.header-searchbar img{
+    width: 25px;
+    height: 25px;
 }
-.header-searchbar input, .header-searchbar input:focus{
+.header-searchbar input{
     background-color: #e2e8f0;
-    border: none;
     outline: none;
+    border-radius: 30px;
+    height: 35px;
+    width: 100%;
+}
+.profile-details{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+.profile-details span{
+    font-weight: 900;
+
+}
+.profile-picture{
+    height: 50px;
+    width: 50px;
+    background: url(favicon/profilepicture.jpeg) no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    border: .2px solid black;
+}
+
+.profile-details img{
+    width: 25px;
+    height: 25px;
+}
+
+.header-welcome{
+    display: grid;
+    grid-template-columns: 1fr 8fr;
+    align-items: center;
+    font-weight: 900;
+}
+.header-welcome .profile-picture{
+    height: 70px;
+    width: 70px;
+}
+.header-welcome .name{
+    font-size: 30px;
+}
+.header-buttons{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+.header-buttons button{
+    background: #1992d3;
+    color: white;
+    font-weight: 900;
+    border-radius: 25px;
+    min-width: 100px;
+    min-height: 40px;
+    height: 40px;
 }
 .main-content-wrap{
     display: grid;
     grid-template-columns: 5fr 2fr;
 }
-
+.main-content{
+    font-weight: 500;
+    font-size: 20px;
+    background: #e2e8f0;
+    margin-top: 5px;
+    padding: 20px;
+}
 .main-cards{
-    background: red;
     display: grid;
     grid-template: 1fr 1fr 1fr / 1fr 1fr;
+    gap: 15px;
 }
-
+.card-1{
+    background:#f0b329;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 20px;
+}
+.card-1 p{
+    font-weight: 400px;
+    font-size: 16px;
+    color: dimgray;
+}
+.card-icons{
+    display: grid;
+    grid-template-columns: 5fr 1fr 1fr 1fr;
+}
+.card-icons .icon{
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+}
+.favorite{
+    background: url(favicon/favorite.png) no-repeat;
+}
+.share{
+    background: url(favicon/share.png) no-repeat;
+}
+.delete{
+    background: url(favicon/delete.png) no-repeat;
+}
 .side-content{
     background-color: blue;
     display: grid;
